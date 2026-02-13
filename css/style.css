@@ -333,6 +333,13 @@ main {
   background-position: center;
   position: relative;
   width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .swiper-slide::before {
