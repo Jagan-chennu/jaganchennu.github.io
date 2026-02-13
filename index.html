@@ -89,81 +89,104 @@
       </div>
     </section>
 
-    <!-- Recent Posts Section -->
+    <!-- Recent Posts Carousel Section -->
     <section class="posts-section">
       <h2>📚 Recent Posts</h2>
-      <div class="posts-grid">
-        <!-- Post 1 -->
-        <div class="post-card" onclick="window.location.href='posts/getting-started-linux.html'">
-          <div class="post-image">🐧</div>
-          <div class="post-content">
-            <div class="post-date">Feb 13, 2026</div>
-            <h3 class="post-title">Getting Started with Linux</h3>
-            <p class="post-excerpt">Essential commands you need to know to navigate Linux like a pro...</p>
-            <small>Linux</small>
-            <small>Tutorial</small>
-          </div>
-        </div>
+      <div class="posts-carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-container">
+            <!-- Post 1 -->
+            <div class="carousel-item">
+              <div class="post-card" onclick="window.location.href='posts/getting-started-linux.html'">
+                <div class="post-image">🐧</div>
+                <div class="post-content">
+                  <div class="post-date">Feb 13, 2026</div>
+                  <h3 class="post-title">Getting Started with Linux</h3>
+                  <p class="post-excerpt">Essential commands you need to know to navigate Linux like a pro...</p>
+                  <small>Linux</small>
+                  <small>Tutorial</small>
+                </div>
+              </div>
+            </div>
 
-        <!-- Post 2 -->
-        <div class="post-card" onclick="window.location.href='posts/docker-basics.html'">
-          <div class="post-image">🐳</div>
-          <div class="post-content">
-            <div class="post-date">Feb 10, 2026</div>
-            <h3 class="post-title">Docker Basics For Beginners</h3>
-            <p class="post-excerpt">Learn containerization with Docker and transform your development workflow...</p>
-            <small>Docker</small>
-            <small>DevOps</small>
-          </div>
-        </div>
+            <!-- Post 2 -->
+            <div class="carousel-item">
+              <div class="post-card" onclick="window.location.href='posts/docker-basics.html'">
+                <div class="post-image">🐳</div>
+                <div class="post-content">
+                  <div class="post-date">Feb 10, 2026</div>
+                  <h3 class="post-title">Docker Basics For Beginners</h3>
+                  <p class="post-excerpt">Learn containerization with Docker and transform your development workflow...</p>
+                  <small>Docker</small>
+                  <small>DevOps</small>
+                </div>
+              </div>
+            </div>
 
-        <!-- Post 3 -->
-        <div class="post-card" onclick="window.location.href='posts/file-permissions.html'">
-          <div class="post-image">🔐</div>
-          <div class="post-content">
-            <div class="post-date">Feb 5, 2026</div>
-            <h3 class="post-title">Understanding File Permissions</h3>
-            <p class="post-excerpt">Master chmod and chown to control access to your files and directories...</p>
-            <small>Linux</small>
-            <small>Security</small>
-          </div>
-        </div>
+            <!-- Post 3 -->
+            <div class="carousel-item">
+              <div class="post-card" onclick="window.location.href='posts/file-permissions.html'">
+                <div class="post-image">🔐</div>
+                <div class="post-content">
+                  <div class="post-date">Feb 5, 2026</div>
+                  <h3 class="post-title">Understanding File Permissions</h3>
+                  <p class="post-excerpt">Master chmod and chown to control access to your files and directories...</p>
+                  <small>Linux</small>
+                  <small>Security</small>
+                </div>
+              </div>
+            </div>
 
-        <!-- Post 4 -->
-        <div class="post-card" onclick="window.location.href='posts/shell-scripting.html'">
-          <div class="post-image">⌨️</div>
-          <div class="post-content">
-            <div class="post-date">Jan 28, 2026</div>
-            <h3 class="post-title">Shell Scripting Automation</h3>
-            <p class="post-excerpt">Write bash scripts to automate tasks and boost your productivity...</p>
-            <small>Bash</small>
-            <small>Scripting</small>
-          </div>
-        </div>
+            <!-- Post 4 -->
+            <div class="carousel-item">
+              <div class="post-card" onclick="window.location.href='posts/shell-scripting.html'">
+                <div class="post-image">⌨️</div>
+                <div class="post-content">
+                  <div class="post-date">Jan 28, 2026</div>
+                  <h3 class="post-title">Shell Scripting Automation</h3>
+                  <p class="post-excerpt">Write bash scripts to automate tasks and boost your productivity...</p>
+                  <small>Bash</small>
+                  <small>Scripting</small>
+                </div>
+              </div>
+            </div>
 
-        <!-- Post 5 -->
-        <div class="post-card" onclick="window.location.href='posts/git-essentials.html'">
-          <div class="post-image">🔀</div>
-          <div class="post-content">
-            <div class="post-date">Jan 15, 2026</div>
-            <h3 class="post-title">Git Essentials Guide</h3>
-            <p class="post-excerpt">Version control fundamentals - commit, branch, merge, and collaborate...</p>
-            <small>Git</small>
-            <small>Tools</small>
-          </div>
-        </div>
+            <!-- Post 5 -->
+            <div class="carousel-item">
+              <div class="post-card" onclick="window.location.href='posts/git-essentials.html'">
+                <div class="post-image">🔀</div>
+                <div class="post-content">
+                  <div class="post-date">Jan 15, 2026</div>
+                  <h3 class="post-title">Git Essentials Guide</h3>
+                  <p class="post-excerpt">Version control fundamentals - commit, branch, merge, and collaborate...</p>
+                  <small>Git</small>
+                  <small>Tools</small>
+                </div>
+              </div>
+            </div>
 
-        <!-- Post 6 -->
-        <div class="post-card" onclick="window.location.href='posts/linux-grep.html'">
-          <div class="post-image">🔍</div>
-          <div class="post-content">
-            <div class="post-date">Dec 28, 2025</div>
-            <h3 class="post-title">Mastering grep Command</h3>
-            <p class="post-excerpt">Text searching and pattern matching - become a grep expert in minutes...</p>
-            <small>Linux</small>
-            <small>Commands</small>
+            <!-- Post 6 -->
+            <div class="carousel-item">
+              <div class="post-card" onclick="window.location.href='posts/linux-grep.html'">
+                <div class="post-image">🔍</div>
+                <div class="post-content">
+                  <div class="post-date">Dec 28, 2025</div>
+                  <h3 class="post-title">Mastering grep Command</h3>
+                  <p class="post-excerpt">Text searching and pattern matching - become a grep expert in minutes...</p>
+                  <small>Linux</small>
+                  <small>Commands</small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-button carousel-prev" aria-label="Previous posts">❮</button>
+        <button class="carousel-button carousel-next" aria-label="Next posts">❯</button>
+        
+        <!-- Pagination Dots -->
+        <div class="carousel-pagination"></div>
       </div>
     </section>
   </main>
@@ -175,6 +198,7 @@
   </footer>
 
   <script src="js/slider.js"></script>
+  <script src="js/carousel.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
   <script src="js/search.js"></script>
   <script src="js/theme.js"></script>
