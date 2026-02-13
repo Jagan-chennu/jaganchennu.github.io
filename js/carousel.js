@@ -1,4 +1,5 @@
 // Carousel/Slider implementation for Recent Posts
+// Configuration: 1 post per view, horizontal transitions
 document.addEventListener('DOMContentLoaded', function() {
   const carousel = document.querySelector('.posts-carousel');
   
@@ -16,10 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
+  // Configuration
+  const CONFIG = {
+    slidesPerView: 1,      // Only 1 post visible at a time
+    slidesPerGroup: 1,     // Navigate 1 post at a time
+    autoplayInterval: 5000  // 5 seconds
+  };
+
   let currentIndex = 0;
   let autoplayInterval;
 
-  // Create pagination dots
+  // Create pagination dots - one for each post
   function createPaginationDots() {
     paginationContainer.innerHTML = '';
     
@@ -32,7 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Update carousel position and active states
   function updateCarousel() {
+    // Calculate offset: -100% per slide
     const offset = -(currentIndex * 100);
     container.style.transform = `translateX(${offset}%)`;
 
@@ -43,9 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Navigate to next slide
   function nextSlide() {
     if (currentIndex < items.length - 1) {
-      currentIndex++;
+      currentIndex += CONFIG.slidesPerGroup;
     } else {
       currentIndex = 0; // Loop back to start
     }
@@ -54,9 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
     resetAutoplay();
   }
 
+  // Navigate to previous slide
   function prevSlide() {
     if (currentIndex > 0) {
-      currentIndex--;
+      currentIndex -= CONFIG.slidesPerGroup;
     } else {
       currentIndex = items.length - 1; // Loop to end
     }
@@ -65,32 +77,36 @@ document.addEventListener('DOMContentLoaded', function() {
     resetAutoplay();
   }
 
+  // Jump to specific slide
   function goToSlide(index) {
     currentIndex = index;
     updateCarousel();
     resetAutoplay();
   }
 
+  // Auto-rotate slides
   function startAutoplay() {
-    autoplayInterval = setInterval(nextSlide, 5000);
+    autoplayInterval = setInterval(nextSlide, CONFIG.autoplayInterval);
   }
 
+  // Reset autoplay timer
   function resetAutoplay() {
     clearInterval(autoplayInterval);
     startAutoplay();
   }
 
-  // Event listeners
+  // Event listeners for navigation
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
   if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
-  // Pause autoplay on hover
+  // Pause autoplay on hover, resume on leave
   carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
   carousel.addEventListener('mouseleave', () => startAutoplay());
 
-  // Initialize
+  // Initialize carousel
   createPaginationDots();
   updateCarousel();
   startAutoplay();
 });
+
 
