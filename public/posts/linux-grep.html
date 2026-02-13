@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastering grep - AVIDFLICK</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo"><strong>AVIDFLICK</strong></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article class="post-single">
+      <h1>Mastering grep Command</h1>
+      
+      <div class="post-meta">
+        <span>📅 December 28, 2025</span>
+        <span>👤 By You</span>
+        <span>⏱️ 9 min read</span>        <a href="https://github.com/YOUR-USERNAME/avidflick-blog/edit/main/posts/linux-grep.md" class="edit-github" target="_blank">✏️ Edit on GitHub</a>      </div>
+
+      <div class="post-body">
+        <p>
+          The <code>grep</code> command is one of the most powerful tools in Linux. It allows you to search for text 
+          patterns in files and streams. Once you master grep, you'll wonder how you ever worked without it!
+        </p>
+
+        <h2>What is grep?</h2>
+        <p>
+          <code>grep</code> stands for "Global Regular Expression Print". It searches for lines matching a pattern 
+          and prints them to the output.
+        </p>
+
+        <h2>Basic Usage</h2>
+
+        <pre><code>$ grep "error" logfile.txt
+$ grep "warning" /var/log/syslog</code></pre>
+
+        <h2>Useful Options</h2>
+
+        <pre><code>$ grep -i "ERROR" file.txt          # Case-insensitive
+$ grep -c "error" file.txt          # Count matches
+$ grep -n "error" file.txt          # Show line numbers
+$ grep -v "error" file.txt          # Invert match (exclude)
+$ grep -r "error" /var/log/         # Recursive search
+$ grep -E "error|warning" file.txt  # Multiple patterns
+$ grep "^error" file.txt            # Start of line
+$ grep "error$" file.txt            # End of line</code></pre>
+
+        <h2>Practical Examples</h2>
+
+        <h3>Find failed logins</h3>
+        <pre><code>$ grep "Failed password" /var/log/auth.log</code></pre>
+
+        <h3>Count occurrences</h3>
+        <pre><code>$ grep -c "GET" access.log</code></pre>
+
+        <h3>Search multiple files</h3>
+        <pre><code>$ grep "TODO" *.py</code></pre>
+
+        <h3>Find with context</h3>
+        <pre><code>$ grep -B 2 -A 2 "error" logfile.txt   # Show 2 lines before and after</code></pre>
+
+        <p>These examples barely scratch the surface. Spend time mastering grep and you'll be searching like a pro!</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AVIDFLICK - All rights reserved</p>
+    <p>Built with Gridea + GitHub + Netlify</p>
+  </footer>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>

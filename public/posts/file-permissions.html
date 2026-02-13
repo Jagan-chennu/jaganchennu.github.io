@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Permissions - AVIDFLICK</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo"><strong>AVIDFLICK</strong></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article class="post-single">
+      <h1>Understanding Linux File Permissions</h1>
+      
+      <div class="post-meta">
+        <span>📅 February 5, 2026</span>
+        <span>👤 By You</span>
+        <span>⏱️ 10 min read</span>        <a href="https://github.com/YOUR-USERNAME/avidflick-blog/edit/main/posts/file-permissions.md" class="edit-github" target="_blank">✏️ Edit on GitHub</a>      </div>
+
+      <div class="post-body">
+        <p>
+          File permissions are fundamental to Linux security. Whether you're a system administrator or a regular user, 
+          understanding how permissions work is crucial. In this article, I'll explain everything you need to know about 
+          Linux file permissions.
+        </p>
+
+        <h2>What Are File Permissions?</h2>
+        <p>
+          File permissions determine who can read (r), write (w), or execute (x) a file or directory. There are three 
+          categories of users:
+        </p>
+        <ul>
+          <li><strong>Owner (User):</strong> The person who created the file</li>
+          <li><strong>Group:</strong> A set of users with shared permissions</li>
+          <li><strong>Others:</strong> Everyone else on the system</li>
+        </ul>
+
+        <h2>Reading Permission Notation</h2>
+
+        <p>When you run <code>ls -l</code>, you see something like:</p>
+        <pre><code>-rw-r--r--  1  john  developers  1024  Feb 5  10:30  file.txt
+drwxr-xr-x  2  john  developers  4096  Feb 4  15:45  directory</code></pre>
+
+        <p>Breaking down <code>-rw-r--r--</code>:</p>
+        <ul>
+          <li><code>-</code> = Regular file (d = directory, l = symlink)</li>
+          <li><code>rw-</code> = Owner permissions (read, write, no execute)</li>
+          <li><code>r--</code> = Group permissions (read only)</li>
+          <li><code>r--</code> = Others permissions (read only)</li>
+        </ul>
+
+        <h2>Changing Permissions with chmod</h2>
+
+        <h3>Symbolic Method</h3>
+        <pre><code>$ chmod u+x file.txt        # Add execute for owner
+$ chmod g+w file.txt        # Add write for group
+$ chmod o-r file.txt        # Remove read for others
+$ chmod a+r file.txt        # Add read for all
+$ chmod 755 directory       # Numeric method</code></pre>
+
+        <h2>Numeric Permissions</h2>
+
+        <pre><code>4 = read (r)
+2 = write (w)
+1 = execute (x)
+
+755 = rwx r-x r-x
+644 = rw- r-- r--
+777 = rwx rwx rwx</code></pre>
+
+        <h2>Changing Ownership with chown</h2>
+
+        <pre><code>$ chown newowner file.txt           # Change owner
+$ chown newowner:newgroup file.txt  # Change owner and group
+$ chown -R newowner directory       # Change recursively</code></pre>
+
+        <h2>Best Practices</h2>
+        <ul>
+          <li>Never give unnecessary permissions to "Others"</li>
+          <li>Use group permissions to share access securely</li>
+          <li>Regularly audit file permissions on critical files</li>
+          <li>Use <code>644</code> for regular files, <code>755</code> for executables</li>
+        </ul>
+
+        <p>Master these concepts and you'll have a solid foundation in Linux security!</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AVIDFLICK - All rights reserved</p>
+    <p>Built with Gridea + GitHub + Netlify</p>
+  </footer>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>

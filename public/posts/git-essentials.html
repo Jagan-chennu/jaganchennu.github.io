@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Essentials - AVIDFLICK</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo"><strong>AVIDFLICK</strong></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article class="post-single">
+      <h1>Git Essentials Guide</h1>
+      
+      <div class="post-meta">
+        <span>📅 January 15, 2026</span>
+        <span>👤 By You</span>
+        <span>⏱️ 11 min read</span>        <a href="https://github.com/YOUR-USERNAME/avidflick-blog/edit/main/posts/git-essentials.md" class="edit-github" target="_blank">✏️ Edit on GitHub</a>      </div>
+
+      <div class="post-body">
+        <p>
+          Git is the industry standard for version control. Whether working solo or on large teams, 
+          Git helps you manage code changes effectively. This guide covers the essentials you need to know.
+        </p>
+
+        <h2>What is Git?</h2>
+        <p>
+          Git is a distributed version control system that tracks changes to your code over time. 
+          It allows you to collaborate with others, revert to previous versions, and create branches for new features.
+        </p>
+
+        <h2>Basic Configuration</h2>
+
+        <pre><code>$ git config --global user.name "Your Name"
+$ git config --global user.email "your.email@example.com"</code></pre>
+
+        <h2>Essential Commands</h2>
+
+        <h3>Initialize a Repository</h3>
+        <pre><code>$ git init my-project
+$ cd my-project</code></pre>
+
+        <h3>Check Status</h3>
+        <pre><code>$ git status</code></pre>
+
+        <h3>Stage Changes</h3>
+        <pre><code>$ git add file.txt       # Add specific file
+$ git add .              # Add all changes</code></pre>
+
+        <h3>Commit Changes</h3>
+        <pre><code>$ git commit -m "Add feature X"</code></pre>
+
+        <h3>View History</h3>
+        <pre><code>$ git log --oneline</code></pre>
+
+        <h2>Branching</h2>
+
+        <pre><code>$ git branch feature/new-ui        # Create branch
+$ git checkout feature/new-ui      # Switch to branch
+$ git checkout -b feature/api      # Create and switch
+
+$ git merge feature/new-ui         # Merge branch</code></pre>
+
+        <h2>Remote Repositories</h2>
+
+        <pre><code>$ git remote add origin https://github.com/user/repo.git
+$ git push origin main             # Push to remote
+$ git pull origin main             # Pull from remote</code></pre>
+
+        <p>Master these commands and you'll have a solid foundation in version control!</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AVIDFLICK - All rights reserved</p>
+    <p>Built with Gridea + GitHub + Netlify</p>
+  </footer>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with Linux: Essential Commands - AVIDFLICK</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo"><strong>AVIDFLICK</strong></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article class="post-single">
+      <h1>Getting Started with Linux: Essential Commands</h1>
+      
+      <div class="post-meta">
+        <span>📅 February 13, 2026</span>
+        <span>👤 By You</span>
+        <span>⏱️ 8 min read</span>        <a href="https://github.com/YOUR-USERNAME/avidflick-blog/edit/main/posts/getting-started-linux.md" class="edit-github" target="_blank">✏️ Edit on GitHub</a>      </div>
+
+      <div class="post-body">
+        <p>
+          Linux may seem intimidating at first, but once you master a few essential commands, you'll find that working 
+          with the terminal is actually quite intuitive. In this guide, I'll walk you through the fundamental commands 
+          every Linux user should know.
+        </p>
+
+        <h2>Why Learn Linux Commands?</h2>
+        <p>
+          While graphical interfaces are convenient, the Linux command line (terminal or shell) is incredibly powerful. 
+          By learning basic commands, you can:
+        </p>
+        <ul>
+          <li>Navigate your file system quickly</li>
+          <li>Manage files and directories efficiently</li>
+          <li>Install software and manage systems</li>
+          <li>Automate repetitive tasks</li>
+          <li>Troubleshoot issues effectively</li>
+        </ul>
+
+        <h2>Essential Navigation Commands</h2>
+
+        <h3>pwd - Print Working Directory</h3>
+        <p>Shows your current location in the file system:</p>
+        <pre><code>$ pwd
+/home/username/Documents</code></pre>
+
+        <h3>ls - List Files</h3>
+        <p>Displays files and folders in the current directory:</p>
+        <pre><code>$ ls
+Downloads  Documents  Desktop  Projects
+
+$ ls -la  # Shows hidden files and details
+total 32
+drwxr-xr-x  5 username group  4096 Feb 13 10:30 .
+drwxr-xr-x  3 root     root   4096 Feb 10 08:15 ..

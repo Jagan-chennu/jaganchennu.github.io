@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastering Linux Concepts - AVIDFLICK</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo"><strong>AVIDFLICK</strong></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1 class="page-title">🐧 Mastering Linux Concepts</h1>
+    <p class="page-subtitle">A comprehensive guide to Linux fundamentals and advanced techniques</p>
+
+    <!-- Course Container with Sidebar -->
+    <div class="linux-course-container">
+      <!-- Sidebar Navigation -->
+      <aside class="course-sidebar">
+        <h3>📚 Index</h3>
+        <ul class="course-nav">
+          <li><button data-lesson="lesson-1">Getting Started with Linux</button></li>
+          <li><button data-lesson="lesson-2">Understanding File Permissions</button></li>
+          <li><button data-lesson="lesson-3">Shell Scripting</button></li>
+          <li><button data-lesson="lesson-4">Mastering grep</button></li>
+          <li><button data-lesson="lesson-5">Disk Management</button></li>
+          <li><button data-lesson="lesson-6">User & Group Management</button></li>
+        </ul>
+        <div class="course-progress">
+          <p>📈 Progress: <span id="progress">1</span>/6 lessons</p>
+        </div>
+      </aside>
+
+      <!-- Course Content -->
+      <div class="course-content">
+        <!-- Lesson 1 -->
+        <section class="course-lesson" id="lesson-1">
+          <h2 class="lesson-title">Getting Started with Linux: Essential Commands</h2>
+          <div class="lesson-meta">
+            <span>📅 February 13, 2026</span>
+            <span>⏱️ 8 min read</span>
+            <span>📊 Beginner</span>
+          </div>
+          <div class="lesson-body">
+            <p>
+              Linux may seem intimidating at first, but once you master a few essential commands, you'll find that working 
+              with the terminal is actually quite intuitive. In this guide, I'll walk you through the fundamental commands 
+              every Linux user should know.
+            </p>
+
+            <h3>Why Learn Linux Commands?</h3>
+            <p>
+              While graphical interfaces are convenient, the Linux command line (terminal or shell) is incredibly powerful. 
+              By learning basic commands, you can:
+            </p>
+            <ul>
+              <li>Navigate your file system quickly</li>
+              <li>Manage files and directories efficiently</li>
+              <li>Install software and manage systems</li>
+              <li>Automate repetitive tasks</li>
+              <li>Troubleshoot issues effectively</li>
+            </ul>
+
+            <h3>Essential Navigation Commands</h3>
+
+            <h4>pwd - Print Working Directory</h4>
+            <p>Shows your current location in the file system:</p>
+            <pre><code>$ pwd
+/home/username/Documents</code></pre>
+
+            <h4>ls - List Files</h4>
+            <p>Displays files and folders in the current directory:</p>
+            <pre><code>$ ls
+Downloads  Documents  Desktop  Projects
+
+$ ls -la  # Shows hidden files and details
+total 32
+drwxr-xr-x  5 username group  4096 Feb 13 10:30 .
+drwxr-xr-x  3 root     root   4096 Feb 10 08:15 ..</code></pre>
+
+            <h4>cd - Change Directory</h4>
+            <p>Navigate to a different folder:</p>
+            <pre><code>$ cd Documents        # Go to Documents folder
+$ cd ..              # Go up one level
+$ cd ~               # Go to home directory
+$ cd /               # Go to root directory</code></pre>
+
+            <h3>File and Directory Operations</h3>
+
+            <h4>mkdir - Create Directory</h4>
+            <pre><code>$ mkdir my-folder
+$ mkdir -p path/to/nested/folders  # Create nested directories</code></pre>
+
+            <h4>touch - Create Empty File</h4>
+            <pre><code>$ touch filename.txt</code></pre>
+
+            <h4>cp - Copy Files</h4>
+            <pre><code>$ cp source.txt destination.txt
+$ cp -r folder1 folder2  # Copy directory recursively</code></pre>
+
+            <h4>mv - Move or Rename</h4>
+            <pre><code>$ mv oldname.txt newname.txt  # Rename
+$ mv file.txt /path/to/destination/  # Move</code></pre>
+
+            <h4>rm - Remove Files</h4>
+            <pre><code>$ rm filename.txt
+$ rm -r folder_name  # Remove directory and contents</code></pre>
+
+            <h3>Viewing File Contents</h3>
+
+            <h4>cat - Display File Content</h4>
+            <pre><code>$ cat filename.txt</code></pre>
+
+            <h4>less - View Files Interactively</h4>
+            <pre><code>$ less largefile.txt  # Press 'q' to quit</code></pre>
+
+            <h3>Key Takeaways</h3>
+            <ul>
+              <li>Master <code>pwd</code>, <code>ls</code>, and <code>cd</code> for navigation</li>
+              <li>Learn basic file operations: <code>cp</code>, <code>mv</code>, <code>rm</code></li>
+              <li>Practice in a safe environment before managing critical files</li>
+              <li>Use <code>man commandname</code> to read command documentation</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Lesson 2 -->
+        <section class="course-lesson" id="lesson-2">
+          <h2 class="lesson-title">Understanding Linux File Permissions</h2>
+          <div class="lesson-meta">
+            <span>📅 February 5, 2026</span>
+            <span>⏱️ 10 min read</span>
+            <span>📊 Intermediate</span>
+          </div>
+          <div class="lesson-body">
+            <p>
+              File permissions are fundamental to Linux security. Whether you're a system administrator or a regular user, 
+              understanding how permissions work is crucial.
+            </p>
+
+            <h3>What Are File Permissions?</h3>
+            <p>
+              File permissions determine who can read (r), write (w), or execute (x) a file or directory. There are three 
+              categories of users:
+            </p>
+            <ul>
+              <li><strong>Owner (User):</strong> The person who created the file</li>
+              <li><strong>Group:</strong> A set of users with shared permissions</li>
+              <li><strong>Others:</strong> Everyone else on the system</li>
+            </ul>
+
+            <h3>Reading Permission Notation</h3>
+            <p>When you run <code>ls -l</code>, you see something like:</p>
+            <pre><code>-rw-r--r--  1  john  developers  1024  Feb 5  10:30  file.txt
+drwxr-xr-x  2  john  developers  4096  Feb 4  15:45  directory</code></pre>
+
+            <p>Breaking down <code>-rw-r--r--</code>:</p>
+            <ul>
+              <li><code>-</code> = Regular file (d = directory, l = symlink)</li>
+              <li><code>rw-</code> = Owner permissions (read, write, no execute)</li>
+              <li><code>r--</code> = Group permissions (read only)</li>
+              <li><code>r--</code> = Others permissions (read only)</li>
+            </ul>
+
+            <h3>Changing Permissions with chmod</h3>
+
+            <h4>Symbolic Method</h4>
+            <pre><code>$ chmod u+x file.txt        # Add execute for owner
+$ chmod g+w file.txt        # Add write for group
+$ chmod o-r file.txt        # Remove read for others
+$ chmod a+r file.txt        # Add read for all</code></pre>
+
+            <h4>Numeric Method</h4>
+            <pre><code>4 = read (r)
+2 = write (w)
+1 = execute (x)
+
+$ chmod 755 directory       # rwx r-x r-x
+$ chmod 644 file.txt        # rw- r-- r--
+$ chmod 777 shared-folder   # rwx rwx rwx</code></pre>
+
+            <h3>Changing Ownership with chown</h3>
+            <pre><code>$ chown newowner file.txt           # Change owner
+$ chown newowner:newgroup file.txt  # Change owner and group
+$ chown -R newowner directory       # Change recursively</code></pre>
+
+            <h3>Best Practices</h3>
+            <ul>
+              <li>Never give unnecessary permissions to "Others"</li>
+              <li>Use group permissions to share access securely</li>
+              <li>Regularly audit file permissions on critical files</li>
+              <li>Use <code>644</code> for regular files, <code>755</code> for executables</li>
+              <li>Be careful with <code>chmod 777</code> - it's a security risk</li>
+            </ul>
+
+            <h3>Real-World Scenarios</h3>
+
+            <h4>Scenario: Protect Sensitive Configuration File</h4>
+            <pre><code>$ chmod 600 /etc/myapp/secrets.conf  # Owner read/write only
+$ chown myapp:myapp /etc/myapp/secrets.conf</code></pre>
+
+            <h4>Scenario: Share Script with Team</h4>
+            <pre><code>$ chmod 755 deploy.sh              # Owner: rwx, Others: r-x
+$ chown developer:team deploy.sh   # Set group ownership</code></pre>
+
+            <p>Master these concepts and you'll have a solid foundation in Linux security!</p>
+          </div>
+        </section>
+
+        <!-- Lesson 3 -->
+        <section class="course-lesson" id="lesson-3">
+          <h2 class="lesson-title">Shell Scripting: Automate Your Tasks</h2>
+          <div class="lesson-meta">
+            <span>📅 January 28, 2026</span>
+            <span>⏱️ 15 min read</span>
+            <span>📊 Intermediate</span>
+          </div>
+          <div class="lesson-body">
+            <p>
+              One of the most powerful skills in Linux is shell scripting. Scripts allow you to automate repetitive tasks, 
+              combine multiple commands, and create powerful tools.
+            </p>
+
+            <h3>Why Shell Scripting?</h3>
+            <ul>
+              <li>Automate daily tasks (backups, log cleanup)</li>
+              <li>Create system administration tools</li>
+              <li>Improve productivity exponentially</li>
+              <li>Create reproducible processes</li>
+              <li>Chain commands together intelligently</li>
+            </ul>
+
+            <h3>Your First Shell Script</h3>
+            <p>Create a file called <code>hello.sh</code>:</p>
+            <pre><code>#!/bin/bash
+
+# This is a comment
+echo "Hello, World!"
+echo "Welcome to shell scripting!"</code></pre>
+
+            <p>Make it executable and run it:</p>
+            <pre><code>$ chmod +x hello.sh
+$ ./hello.sh
+Hello, World!
+Welcome to shell scripting!</code></pre>
+
+            <h3>Variables</h3>
+            <pre><code>#!/bin/bash
+
+name="Alice"
+age=25
+greeting="Hello, $name! You are $age years old."
+
+echo $greeting
+# Output: Hello, Alice! You are 25 years old.</code></pre>
+
+            <h3>Conditionals</h3>
+            <pre><code>#!/bin/bash
+
+file="myfile.txt"
+
+if [ -f "$file" ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi</code></pre>
+
+            <h3>Loops</h3>
+
+            <h4>For Loop</h4>
+            <pre><code>#!/bin/bash
+
+for i in {1..5}; do
+    echo "Iteration $i"
+done</code></pre>
+
+            <h4>While Loop</h4>
+            <pre><code>#!/bin/bash
+
+count=1
+while [ $count -le 3 ]; do
+    echo "Count: $count"
+    count=$((count + 1))
+done</code></pre>
+
+            <h3>Functions</h3>
+            <pre><code>#!/bin/bash
+
+greet() {
+    local name=$1
+    echo "Hello, $name!"
+}
+
+greet "Alice"
+greet "Bob"</code></pre>
+
+            <h3>Practical Example: Backup Script</h3>
+            <pre><code>#!/bin/bash
+
+# Simple backup script
+source_dir="/home/user/documents"
+backup_dir="/backup/daily"
+date=$(date +%Y%m%d)
+
+echo "Starting backup..."
+cp -r "$source_dir" "$backup_dir/backup_$date"
+echo "Backup completed: $backup_dir/backup_$date"</code></pre>
+
+            <h3>Tips for Writing Better Scripts</h3>
+            <ul>
+              <li>Always use quotes around variables: <code>"$var"</code></li>
+              <li>Use meaningful variable names</li>
+              <li>Add comments to explain your code</li>
+              <li>Handle errors with <code>set -e</code></li>
+              <li>Test scripts thoroughly before automation</li>
+              <li>Make scripts executable with <code>chmod +x</code></li>
+            </ul>
+
+            <p>Shell scripting is a valuable skill that will make you significantly more productive. Start small and build up to more complex scripts!</p>
+          </div>
+        </section>
+
+        <!-- Lesson 4 -->
+        <section class="course-lesson" id="lesson-4">
+          <h2 class="lesson-title">Mastering grep Command</h2>
+          <div class="lesson-meta">
+            <span>📅 December 28, 2025</span>
+            <span>⏱️ 9 min read</span>
+            <span>📊 Beginner</span>
+          </div>
+          <div class="lesson-body">
+            <p>
+              The <code>grep</code> command is one of the most powerful tools in Linux. It allows you to search for text 
+              patterns in files and streams. Once you master grep, you'll wonder how you ever worked without it!
+            </p>
+
+            <h3>What is grep?</h3>
+            <p>
+              <code>grep</code> stands for "Global Regular Expression Print". It searches for lines matching a pattern 
+              and prints them to the output.
+            </p>
+
+            <h3>Basic Usage</h3>
+            <pre><code>$ grep "error" logfile.txt
+$ grep "warning" /var/log/syslog</code></pre>
+
+            <h3>Useful Options</h3>
+            <pre><code>$ grep -i "ERROR" file.txt          # Case-insensitive
+$ grep -c "error" file.txt          # Count matches
+$ grep -n "error" file.txt          # Show line numbers
+$ grep -v "error" file.txt          # Invert match (exclude)
+$ grep -r "error" /var/log/         # Recursive search
+$ grep -E "error|warning" file.txt  # Multiple patterns
+$ grep "^error" file.txt            # Start of line
+$ grep "error$" file.txt            # End of line</code></pre>
+
+            <h3>Practical Examples</h3>
+
+            <h4>Find failed logins</h4>
+            <pre><code>$ grep "Failed password" /var/log/auth.log</code></pre>
+
+            <h4>Count occurrences</h4>
+            <pre><code>$ grep -c "GET" access.log</code></pre>
+
+            <h4>Search multiple files</h4>
+            <pre><code>$ grep "TODO" *.py</code></pre>
+
+            <h4>Find with context</h4>
+            <pre><code>$ grep -B 2 -A 2 "error" logfile.txt   # Show 2 lines before and after</code></pre>
+
+            <h4>Combine with pipes</h4>
+            <pre><code>$ cat logfile.txt | grep "error" | grep "critical"
+$ ps aux | grep "python"  # Find running processes</code></pre>
+
+            <h3>Regular Expressions with grep</h3>
+            <pre><code>$ grep "[0-9]\{3\}" file.txt              # Find 3-digit numbers
+$ grep "^ERROR" file.txt                  # Line starting with ERROR
+$ grep "\.log$" file.txt                  # Files ending with .log
+$ grep -E "[a-z]+@[a-z]+\.[a-z]+" file   # Email addresses</code></pre>
+
+            <h3>Tips and Tricks</h3>
+            <ul>
+              <li>Use <code>grep -i</code> for case-insensitive searches</li>
+              <li>Use <code>grep -n</code> to quickly identify line numbers</li>
+              <li>Combine with other tools using pipes</li>
+              <li>Test patterns on small files first</li>
+              <li>Use <code>grep -E</code> for extended regex patterns</li>
+            </ul>
+
+            <p>These examples barely scratch the surface. Spend time mastering grep and you'll be searching like a pro!</p>
+          </div>
+        </section>
+
+        <!-- Lesson 5 -->
+        <section class="course-lesson" id="lesson-5">
+          <h2 class="lesson-title">Disk Management in Linux</h2>
+          <div class="lesson-meta">
+            <span>📅 December 10, 2025</span>
+            <span>⏱️ 12 min read</span>
+            <span>📊 Advanced</span>
+          </div>
+          <div class="lesson-body">
+            <p>
+              Managing disk storage is a critical skill for Linux system administrators. Understanding partitions, 
+              filesystems, and mounting is essential for a healthy system.
+            </p>
+
+            <h3>Viewing Disk Information</h3>
+
+            <h4>df - Disk Space Usage</h4>
+            <pre><code>$ df -h  # Show sizes in human-readable format
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1       100G   45G   50G  47% /
+/dev/sda2       200G  150G   40G  80% /home</code></pre>
+
+            <h4>du - Directory Size</h4>
+            <pre><code>$ du -sh /home  # Show total size of directory
+45G     /home
+
+$ du -sh /home/*  # Show size of each subdirectory
+12G     /home/alice
+33G     /home/bob</code></pre>
+
+            <h3>Partition Management</h3>
+
+            <h4>fdisk - Partition Tool</h4>
+            <pre><code>$ sudo fdisk -l  # List all partitions
+$ sudo fdisk /dev/sda  # Interactive partition editor</code></pre>
+
+            <h4>parted - Modern Partition Tool</h4>
+            <pre><code>$ sudo parted -l  # List partitions with details
+$ sudo parted /dev/sda  # Interactive mode</code></pre>
+
+            <h3>Filesystem Operations</h3>
+
+            <h4>Format a Partition (WARNING: Deletes Data!)</h4>
+            <pre><code>$ sudo mkfs.ext4 /dev/sda1  # Create ext4 filesystem
+$ sudo mkfs.ntfs /dev/sda1  # Create NTFS filesystem</code></pre>
+
+            <h4>Check Filesystem</h4>
+            <pre><code>$ sudo fsck /dev/sda1  # Check for errors</code></pre>
+
+            <h3>Mounting and Unmounting</h3>
+
+            <h4>Mount a Partition</h4>
+            <pre><code>$ sudo mount /dev/sda1 /mnt/backup
+$ mount  # View all mounted filesystems</code></pre>
+
+            <h4>Unmount a Partition</h4>
+            <pre><code>$ sudo umount /mnt/backup</code></pre>
+
+            <h4>Persistent Mounts with fstab</h4>
+            <pre><code>$ sudo nano /etc/fstab
+# Add line:
+/dev/sda1  /mnt/backup  ext4  defaults  0  0</code></pre>
+
+            <h3>Disk Usage Analysis Tools</h3>
+
+            <h4>ncdu - Interactive Disk Usage</h4>
+            <pre><code>$ ncdu /home  # Interactive directory browser</code></pre>
+
+            <h4>iostat - I/O Statistics</h4>
+            <pre><code>$ iostat -x 1  # Show I/O stats every 1 second</code></pre>
+
+            <h3>Best Practices</h3>
+            <ul>
+              <li>Monitor disk space regularly (aim to keep < 90% full)</li>
+              <li>Use separate partitions for /, /home, and /var</li>
+              <li>Regularly clean up old logs and temp files</li>
+              <li>Always backup before making partition changes</li>
+              <li>Use LVM for flexibility in partition management</li>
+            </ul>
+
+            <p>Proper disk management ensures your system stays healthy and performs well!</p>
+          </div>
+        </section>
+
+        <!-- Lesson 6 -->
+        <section class="course-lesson" id="lesson-6">
+          <h2 class="lesson-title">User & Group Management</h2>
+          <div class="lesson-meta">
+            <span>📅 November 15, 2025</span>
+            <span>⏱️ 11 min read</span>
+            <span>📊 Intermediate</span>
+          </div>
+          <div class="lesson-body">
+            <p>
+              Managing users and groups is fundamental to system administration. It allows you to control access, 
+              manage permissions, and maintain a secure system.
+            </p>
+
+            <h3>User Management</h3>
+
+            <h4>Create a User</h4>
+            <pre><code>$ sudo useradd username
+$ sudo useradd -m -s /bin/bash username  # With home dir and shell</code></pre>
+
+            <h4>Set User Password</h4>
+            <pre><code>$ sudo passwd username</code></pre>
+
+            <h4>Modify User Account</h4>
+            <pre><code>$ sudo usermod -aG sudo username  # Add to sudo group
+$ sudo usermod -s /bin/zsh username  # Change shell
+$ sudo usermod -d /home/newpath username  # Change home directory</code></pre>
+
+            <h4>Delete a User</h4>
+            <pre><code>$ sudo userdel username
+$ sudo userdel -r username  # Also remove home directory</code></pre>
+
+            <h4>View User Information</h4>
+            <pre><code>$ id username  # Show user ID and groups
+uid=1000(alice) gid=1000(alice) groups=1000(alice),4(adm),27(sudo)
+
+$ grep username /etc/passwd  # View user entry
+$ getent passwd username  # Query user database</code></pre>
+
+            <h3>Group Management</h3>
+
+            <h4>Create a Group</h4>
+            <pre><code>$ sudo groupadd developers</code></pre>
+
+            <h4>Add User to Group</h4>
+            <pre><code>$ sudo usermod -aG developers alice  # Add to secondary group
+$ id alice  # Verify</code></pre>
+
+            <h4>View Group Information</h4>
+            <pre><code>$ getent group developers
+$ cat /etc/group | grep developers</code></pre>
+
+            <h4>Delete a Group</h4>
+            <pre><code>$ sudo groupdel developers</code></pre>
+
+            <h3>Sudo Access Control</h3>
+
+            <h4>Grant Sudo Access</h4>
+            <pre><code>$ sudo usermod -aG sudo username  # Add to sudo group</code></pre>
+
+            <h4>Configure sudoers</h4>
+            <pre><code>$ sudo visudo  # Safely edit sudoers file
+
+# Add line to allow specific command without password:
+username ALL=(ALL) NOPASSWD: /usr/bin/systemctl</code></pre>
+
+            <h3>Practical Examples</h3>
+
+            <h4>Create Development Team Setup</h4>
+            <pre><code>$ sudo groupadd dev-team
+$ sudo useradd -m -G dev-team alice
+$ sudo useradd -m -G dev-team bob
+$ sudo chown -R :dev-team /var/www/project
+$ sudo chmod g+rwx /var/www/project</code></pre>
+
+            <h4>Restrict User Permissions</h4>
+            <pre><code>$ sudo useradd -s /usr/sbin/nologin webapp  # Doesn't allow login
+$ sudo usermod -L username  # Lock user account
+$ sudo usermod -U username  # Unlock user account</code></pre>
+
+            <h3>Best Practices</h3>
+            <ul>
+              <li>Create users with home directories</li>
+              <li>Use groups to manage permissions efficiently</li>
+              <li>Grant minimum necessary privileges</li>
+              <li>Regularly audit user and group membership</li>
+              <li>Disable accounts instead of deleting them when possible</li>
+              <li>Use strong passwords (consider ssh keys for servers)</li>
+            </ul>
+
+            <h3>Security Considerations</h3>
+            <ul>
+              <li>Limit sudo access to trusted users only</li>
+              <li>Use groups instead of individual permissions</li>
+              <li>Monitor who has access to sensitive directories</li>
+              <li>Regularly review and remove unnecessary accounts</li>
+              <li>Use password aging to enforce periodic changes</li>
+            </ul>
+
+            <p>Proper user and group management is the foundation of a secure and well-organized system!</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AVIDFLICK - All rights reserved</p>
+    <p>Built with Gridea + GitHub + Netlify</p>
+  </footer>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>
