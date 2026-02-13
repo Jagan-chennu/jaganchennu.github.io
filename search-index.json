@@ -1,0 +1,70 @@
+{
+  "documents": [
+    {
+      "id": "home",
+      "url": "index.html",
+      "title": "AVIDFLICK - Home",
+      "content": "AVIDFLICK Insights on Linux Technology Cloud Computing Welcome to AVIDFLICK your source for cutting-edge insights on Linux DevOps and cloud technologies Latest Posts Getting Started with Linux Essential Commands Learn the fundamental Linux commands every beginner should know Docker Basics Containerization for Beginners Understand what containers are and why Docker has become essential for modern development Understanding Linux File Permissions Master chmod and chown to control access to your files and directories Shell Scripting Automate Your Tasks Learn to write bash scripts and automate repetitive tasks Git Essentials Guide Version control fundamentals Mastering grep Command Text searching and pattern matching Recent Posts"
+    },
+    {
+      "id": "blog",
+      "url": "blog.html",
+      "title": "AVIDFLICK - Blog",
+      "content": "AVIDFLICK Blog Posts Explore articles about Linux DevOps and Technology Getting Started with Linux Essential commands you need to know to navigate Linux Docker Basics Learn containerization with Docker Understanding File Permissions Master chmod and chown Shell Scripting Write bash scripts to automate tasks Git Essentials Version control fundamentals Mastering grep Command Text searching and pattern matching"
+    },
+    {
+      "id": "linux-concepts",
+      "url": "linux-concepts.html",
+      "title": "Mastering Linux Concepts - Interactive Course",
+      "content": "Mastering Linux Concepts A comprehensive guide to Linux fundamentals and advanced techniques Getting Started with Linux Essential Commands pwd ls cd mkdir touch cp mv rm cat less File and Directory Operations Shell Scripting Automate Your Tasks Variables Conditionals Loops Functions Understanding File Permissions File permissions determine who can read write or execute a file chmod chown numeric permissions Disk Management Disk space usage partitions filesystems mounting User and Group Management Create users modify user accounts User and Group Management Grant sudo access Mastering grep Command Global Regular Expression Print basic usage useful options practical examples"
+    },
+    {
+      "id": "about",
+      "url": "about.html",
+      "title": "AVIDFLICK - About",
+      "content": "AVIDFLICK About Me Hi I am a passionate Linux and DevOps engineer with years of experience in cloud technologies My Mission Through AVIDFLICK I aim to demystify complex Linux concepts and help developers master essential tools and techniques My Expertise Linux System Administration Docker and Containerization Kubernetes Orchestration Git and Version Control Cloud Computing AWS Azure Shell Scripting Automation Why I Write I believe in the power of knowledge sharing Clear and practical documentation can transform how developers approach their craft Let's Learn Together Join me on this journey of continuous learning and mastery"
+    },
+    {
+      "id": "contact",
+      "url": "contact.html",
+      "title": "AVIDFLICK - Contact",
+      "content": "AVIDFLICK Contact Get in Touch Have questions feedback or want to collaborate Let me hear from you Name Email Message Send"
+    },
+    {
+      "id": "getting-started",
+      "url": "posts/getting-started-linux.html",
+      "title": "Getting Started with Linux: Essential Commands",
+      "content": "Getting Started with Linux Essential Commands pwd Print Working Directory ls List Files cd Change Directory mkdir Create Directory touch Create Empty File cp Copy Files mv Move or Rename rm Remove Files cat Display File Content less View Files Interactively Why Learn Linux Commands Fast navigation file management system administration automation troubleshooting Key Takeaways Master pwd ls and cd for navigation Learn basic file operations cp mv rm Practice in safe environment Use man commandname to read documentation"
+    },
+    {
+      "id": "docker-basics",
+      "url": "posts/docker-basics.html",
+      "title": "Docker Basics: Containerization for Beginners",
+      "content": "Docker Basics Containerization for Beginners What is Docker Docker is a containerization platform that packages your application and all its dependencies into a single unit called a container Virtual Machines vs Containers VMs simulate entire operating systems with massive overhead Containers share the host OS kernel much lighter and faster Key Concepts Images Docker image is a template or blueprint Containers A container is a running instance of a Docker image Registry Docker Hub is the official Docker registry Getting Started Installing Docker Verifying installation Your First Container Running a simple container Conclusion Docker fundamentally changed how we think about deployment"
+    },
+    {
+      "id": "file-permissions",
+      "url": "posts/file-permissions.html",
+      "title": "Understanding Linux File Permissions",
+      "content": "Understanding Linux File Permissions File permissions determine who can read write or execute a file There are three categories of users Owner User The person who created the file Group A set of users with shared permissions Others Everyone else on the system Reading Permission Notation ls -l shows rw-r--r-- Breaking down permissions Owner permissions read write no execute Group permissions read only Others permissions read only Changing Permissions with chmod Symbolic method u+x g+w o-r a+r Numeric method 755 644 777 Changing Ownership with chown Change owner Change owner and group Change recursively Best Practices Never give unnecessary permissions Use group permissions to share access Regularly audit file permissions Use 644 for regular files 755 for executables Master these concepts and you'll have a solid foundation in Linux security"
+    },
+    {
+      "id": "shell-scripting",
+      "url": "posts/shell-scripting.html",
+      "title": "Shell Scripting: Automate Your Tasks",
+      "content": "Shell Scripting Automate Your Tasks Why Shell Scripting Automate daily tasks Create system administration tools Improve productivity Create reproducible processes Chain commands together Your First Shell Script Create hello.sh file Make it executable chmod +x hello.sh Variables name=Alice age=25 Conditionals if [ -f file ]; then Loops for i in {1..5}; do Functions greet() { Practical Example Backup Script Tips for Writing Better Scripts Always use quotes around variables Use meaningful variable names Add comments to explain your code Handle errors with set -e Test scripts thoroughly Make scripts executable chmod +x Shell scripting is a valuable skill"
+    },
+    {
+      "id": "linux-grep",
+      "url": "posts/linux-grep.html",
+      "title": "Mastering grep Command",
+      "content": "Mastering grep Command What is grep grep stands for Global Regular Expression Print It searches for lines matching a pattern and prints them to the output Basic Usage grep error logfile.txt grep warning /var/log/syslog Useful Options -i Case-insensitive -c Count matches -n Show line numbers -v Invert match exclude -r Recursive search -E Multiple patterns Practical Examples Find failed logins Count occurrences Search multiple files Find with context Combine with pipes Regular Expressions grep [0-9]{3} file.txt grep ^ERROR file.txt grep .log$ file.txt Tips and Tricks Use grep -i for case-insensitive searches Use grep -n to quickly identify line numbers Combine with other tools using pipes Test patterns on small files first Use grep -E for extended regex patterns Spend time mastering grep"
+    },
+    {
+      "id": "git-essentials",
+      "url": "posts/git-essentials.html",
+      "title": "Git Essentials Guide",
+      "content": "Git Essentials Guide What is Git Git is a distributed version control system that tracks changes to your code over time It allows you to collaborate with others revert to previous versions and create branches for new features Basic Configuration git config --global user.name git config --global user.email Essential Commands Initialize a Repository Check Status Stage Changes Commit Changes View History Branching Create branch Switch to branch Create and switch Merge branch Remote Repositories Add remote Push to remote Pull from remote Master these commands and you'll have a solid foundation in version control"
+    }
+  ]
+}
