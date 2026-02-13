@@ -5,27 +5,27 @@
 }
 
 :root {
-  /* Dark Mode (Default) */
-  --primary-color: #1a1a2e;
-  --secondary-color: #16213e;
-  --accent-color: #0f3460;
-  --text-color: #eaeaea;
-  --link-color: #e94560;
-  --border-color: #444;
-  --bg-code: #0f3460;
-  --code-text: #76d7c4;
+  /* Dark Mode (Default) - Matches AVIDFLICK Logo (Black & White) */
+  --primary-color: #0a0a0a;
+  --secondary-color: #1a1a1a;
+  --accent-color: #ffffff;
+  --text-color: #ffffff;
+  --link-color: #00d4ff;
+  --border-color: #333;
+  --bg-code: #1a1a1a;
+  --code-text: #00d4ff;
 }
 
 /* Light Mode */
 body.light-mode {
-  --primary-color: #f5f5f5;
+  --primary-color: #f8f8f8;
   --secondary-color: #ffffff;
-  --accent-color: #e8e8f0;
-  --text-color: #222222;
-  --link-color: #d63447;
-  --border-color: #ddd;
+  --accent-color: #1a1a1a;
+  --text-color: #1a1a1a;
+  --link-color: #0088cc;
+  --border-color: #e0e0e0;
   --bg-code: #f0f0f0;
-  --code-text: #c21f30;
+  --code-text: #0088cc;
 }
 
 body {
