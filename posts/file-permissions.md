@@ -1,3 +1,7 @@
+---
+categories: [random]
+---
+
 # Understanding Linux File Permissions
 
 Date: February 5, 2026  

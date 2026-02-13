@@ -1,3 +1,7 @@
+---
+categories: [devops]
+---
+
 # Shell Scripting: Automate Your Tasks
 
 Date: January 28, 2026  

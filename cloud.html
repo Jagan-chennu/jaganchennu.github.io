@@ -31,19 +31,16 @@
     <h1 class="page-title">Cloud Computing</h1>
     <p class="page-subtitle">Cloud tutorials, infrastructure patterns and platform guides.</p>
 
+    <div class="cloud-subpages">
+      <a class="cloud-link" href="aws.html">AWS Guides</a>
+      <a class="cloud-link" href="azure.html">Azure Guides</a>
+    </div>
+
     <section class="posts-section">
-      <div class="posts-grid">
-        <!-- Cloud related posts (placeholder) -->
-        <div class="post-card">
-          <div class="post-image">☁️</div>
-          <div class="post-content">
-            <div class="post-date">—</div>
-            <h3 class="post-title">Cloud articles coming soon</h3>
-            <p class="post-excerpt">This page will list Cloud Computing posts.</p>
-          </div>
-        </div>
-      </div>
+      <h2>Cloud Computing Posts</h2>
+      <div id="category-posts" class="posts-grid" aria-live="polite"></div>
     </section>
+    <script>window.CATEGORY = 'cloud';</script>
   </main>
 
   <footer>
@@ -51,5 +48,7 @@
   </footer>
 
   <script src="js/theme.js"></script>
+  <script src="js/category.js"></script>
+  <noscript><p class="noscript-note">Enable JavaScript to load Cloud posts.</p></noscript>
 </body>
 </html>

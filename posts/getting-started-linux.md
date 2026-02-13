@@ -1,3 +1,7 @@
+---
+categories: [devops]
+---
+
 # Getting Started with Linux: Essential Commands
 
 Date: February 13, 2026  
@@ -85,7 +89,7 @@ $ mv file.txt /path/to/destination/  # Move
 
 ```bash
 $ rm filename.txt
-$ rm -r folder_name  # Remove directory and contents
+$ rm -r folder_name  # Remove directory andcontents
 ```
 
 ## Viewing File Contents

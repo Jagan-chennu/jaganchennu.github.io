@@ -32,27 +32,10 @@
     <p class="page-subtitle">Articles and tutorials about CI/CD, containers and deployment workflows.</p>
 
     <section class="posts-section">
-      <div class="posts-grid">
-        <!-- DevOps related posts -->
-        <div class="post-card" onclick="window.location.href='posts/docker-basics.html'">
-          <div class="post-image">🐳</div>
-          <div class="post-content">
-            <div class="post-date">Feb 10, 2026</div>
-            <h3 class="post-title">Docker Basics For Beginners</h3>
-            <p class="post-excerpt">Learn containerization with Docker and transform your development workflow...</p>
-          </div>
-        </div>
-
-        <div class="post-card" onclick="window.location.href='posts/git-essentials.html'">
-          <div class="post-image">🔀</div>
-          <div class="post-content">
-            <div class="post-date">Jan 15, 2026</div>
-            <h3 class="post-title">Git Essentials Guide</h3>
-            <p class="post-excerpt">Version control fundamentals - commit, branch, merge, and collaborate...</p>
-          </div>
-        </div>
-      </div>
+      <h2>DevOps Posts</h2>
+      <div id="category-posts" class="posts-grid" aria-live="polite"></div>
     </section>
+    <script>window.CATEGORY = 'devops';</script>
   </main>
 
   <footer>
@@ -60,5 +43,7 @@
   </footer>
 
   <script src="js/theme.js"></script>
+  <script src="js/category.js"></script>
+  <noscript><p class="noscript-note">Enable JavaScript to load DevOps posts.</p></noscript>
 </body>
 </html>
