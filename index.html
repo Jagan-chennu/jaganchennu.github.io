@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVIDFLICK - Blog Website Preview</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo"><strong>AVIDFLICK</strong></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1><strong>AVIDFLICK</strong></h1>
+      <p>Insights on Linux, Technology & Cloud Computing</p>
+    </section>
+
+    <!-- Latest Posts Slider -->
+    <section class="slider-section">
+      <h2 class="slider-title">📌 Latest Posts</h2>
+      
+      <div class="swiper">
+        <div class="swiper-wrapper" style="display: flex; transition: transform 0.5s ease;">
+          <!-- Slide 1 -->
+          <div class="swiper-slide swiper-slide-active">
+            <div class="slide-content">
+              <div class="slide-date">February 13, 2026</div>
+              <h3 class="slide-title">Getting Started with Linux: Essential Commands</h3>
+              <p class="slide-excerpt">Learn the fundamental Linux commands that every beginner should know. This guide covers navigation, file management, and system basics to help you get comfortable with the terminal.</p>
+              <div class="slide-tags">
+                <span class="tag">Linux</span>
+                <span class="tag">Tutorial</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="slide-content">
+              <div class="slide-date">February 10, 2026</div>
+              <h3 class="slide-title">Docker Basics: Containerization for Beginners</h3>
+              <p class="slide-excerpt">Understand what containers are and why Docker has become essential for modern development. Learn how to create, run, and manage Docker containers with practical examples.</p>
+              <div class="slide-tags">
+                <span class="tag">Docker</span>
+                <span class="tag">DevOps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="slide-content">
+              <div class="slide-date">February 5, 2026</div>
+              <h3 class="slide-title">Understanding Linux File Permissions</h3>
+              <p class="slide-excerpt">Dive deep into Linux file permissions and ownership. Master chmod, chown, and understand the permission bits to keep your system secure and properly organized.</p>
+              <div class="slide-tags">
+                <span class="tag">Linux</span>
+                <span class="tag">Security</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="slide-content">
+              <div class="slide-date">January 28, 2026</div>
+              <h3 class="slide-title">Shell Scripting: Automate Your Tasks</h3>
+              <p class="slide-excerpt">Learn to write bash scripts to automate repetitive tasks. From simple scripts to complex workflows, discover how shell scripting can save you hours of work every week.</p>
+              <div class="slide-tags">
+                <span class="tag">Bash</span>
+                <span class="tag">Scripting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="swiper-button-prev">❮</button>
+        <button class="swiper-button-next">❯</button>
+
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Posts Section -->
+    <section class="posts-section">
+      <h2>📚 Recent Posts</h2>
+      <div class="posts-grid">
+        <!-- Post 1 -->
+        <div class="post-card" onclick="window.location.href='/posts/getting-started-linux.html'">
+          <div class="post-image">🐧</div>
+          <div class="post-content">
+            <div class="post-date">Feb 13, 2026</div>
+            <h3 class="post-title">Getting Started with Linux</h3>
+            <p class="post-excerpt">Essential commands you need to know to navigate Linux like a pro...</p>
+            <small>Linux</small>
+            <small>Tutorial</small>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post-card" onclick="window.location.href='/posts/docker-basics.html'">
+          <div class="post-image">🐳</div>
+          <div class="post-content">
+            <div class="post-date">Feb 10, 2026</div>
+            <h3 class="post-title">Docker Basics For Beginners</h3>
+            <p class="post-excerpt">Learn containerization with Docker and transform your development workflow...</p>
+            <small>Docker</small>
+            <small>DevOps</small>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post-card" onclick="window.location.href='/posts/file-permissions.html'">
+          <div class="post-image">🔐</div>
+          <div class="post-content">
+            <div class="post-date">Feb 5, 2026</div>
+            <h3 class="post-title">Understanding File Permissions</h3>
+            <p class="post-excerpt">Master chmod and chown to control access to your files and directories...</p>
+            <small>Linux</small>
+            <small>Security</small>
+          </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post-card" onclick="window.location.href='/posts/shell-scripting.html'">
+          <div class="post-image">⌨️</div>
+          <div class="post-content">
+            <div class="post-date">Jan 28, 2026</div>
+            <h3 class="post-title">Shell Scripting Automation</h3>
+            <p class="post-excerpt">Write bash scripts to automate tasks and boost your productivity...</p>
+            <small>Bash</small>
+            <small>Scripting</small>
+          </div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="post-card" onclick="window.location.href='/posts/git-essentials.html'">
+          <div class="post-image">🔀</div>
+          <div class="post-content">
+            <div class="post-date">Jan 15, 2026</div>
+            <h3 class="post-title">Git Essentials Guide</h3>
+            <p class="post-excerpt">Version control fundamentals - commit, branch, merge, and collaborate...</p>
+            <small>Git</small>
+            <small>Tools</small>
+          </div>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="post-card" onclick="window.location.href='/posts/linux-grep.html'">
+          <div class="post-image">🔍</div>
+          <div class="post-content">
+            <div class="post-date">Dec 28, 2025</div>
+            <h3 class="post-title">Mastering grep Command</h3>
+            <p class="post-excerpt">Text searching and pattern matching - become a grep expert in minutes...</p>
+            <small>Linux</small>
+            <small>Commands</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AVIDFLICK - All rights reserved</p>
+    <p>Built with Gridea + GitHub + Netlify</p>
+  </footer>
+
+  <script src="/js/slider.js"></script>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

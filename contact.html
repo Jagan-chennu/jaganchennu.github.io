@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - AVIDFLICK</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo"><strong>AVIDFLICK</strong></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1 class="page-title">Get In Touch</h1>
+    <p class="page-subtitle">Have questions or suggestions? I'd love to hear from you!</p>
+
+    <section class="contact-section">
+      <h2>Contact Information</h2>
+      <p>
+        <strong>Email:</strong> <a href="mailto:your-email@example.com" style="color: var(--link-color);">your-email@example.com</a>
+      </p>
+
+      <h2>Social Media</h2>
+      <p>
+        Follow me on:
+      </p>
+      <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+        <li><strong>Twitter/X:</strong> @your-handle</li>
+        <li><strong>GitHub:</strong> your-username</li>
+        <li><strong>LinkedIn:</strong> your-name</li>
+      </ul>
+
+      <h2>Send Me a Message</h2>
+      <p>Fill out the form below and I'll get back to you as soon as possible (usually within 1-2 business days).</p>
+
+      <form class="contact-form">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p style="margin-top: 2rem; color: #aaa; font-size: 0.9rem;">
+        <em>Note: This is a preview form. When deployed with a backend service like Formspree or Netlify Forms, 
+        it will actually send messages to your email.</em>
+      </p>
+
+      <h2>Response Time</h2>
+      <p>
+        I typically respond to emails and messages within 1-2 business days. For urgent matters, please mention it in your message.
+      </p>
+
+      <h2>What to Contact Me About</h2>
+      <ul style="margin-left: 2rem;">
+        <li>Questions about blog posts or tutorials</li>
+        <li>Topic suggestions for future posts</li>
+        <li>Collaboration opportunities</li>
+        <li>General feedback and comments</li>
+        <li>Corrections or clarifications</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AVIDFLICK - All rights reserved</p>
+    <p>Built with Gridea + GitHub + Netlify</p>
+  </footer>
+
+  <script>
+    // Handle form submission (preview only - doesn't actually send)
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for reaching out! In production, this would send your message. This is just a preview.');
+      this.reset();
+    });
+  </script>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>

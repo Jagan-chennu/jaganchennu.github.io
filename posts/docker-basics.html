@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker Basics - AVIDFLICK</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo"><strong>AVIDFLICK</strong></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article class="post-single">
+      <h1>Docker Basics: Containerization for Beginners</h1>
+      
+      <div class="post-meta">
+        <span>📅 February 10, 2026</span>
+        <span>👤 By You</span>
+        <span>⏱️ 12 min read</span>
+        <a href="https://github.com/YOUR-USERNAME/avidflick-blog/edit/main/posts/docker-basics.md" class="edit-github" target="_blank">✏️ Edit on GitHub</a>
+      </div>
+
+      <div class="post-body">
+        <p>
+          Docker has revolutionized the way we develop, deploy, and run applications. If you've heard the term "containers" 
+          and wondered what the fuss is about, this guide will clarify everything and show you why Docker is now essential 
+          for modern development.
+        </p>
+
+        <h2>What is Docker?</h2>
+        <p>
+          Docker is a containerization platform that packages your application and all its dependencies (libraries, runtime, etc.) 
+          into a single unit called a container. This container can run consistently on any system that has Docker installed.
+        </p>
+
+        <h2>Virtual Machines vs Containers</h2>
+        <p>
+          Before Docker, developers used virtual machines (VMs) to ensure consistent environments. However, VMs are heavy 
+          and resource-intensive. Containers are lighter, faster, and more efficient:
+        </p>
+
+        <ul>
+          <li><strong>VMs:</strong> Simulate entire operating systems with massive overhead</li>
+          <li><strong>Containers:</strong> Share the host OS kernel, much lighter and faster</li>
+        </ul>
+
+        <h2>Key Concepts</h2>
+
+        <h3>Images</h3>
+        <p>
+          A Docker image is a template or blueprint. It contains everything needed to run your application: code, libraries, 
+          dependencies, and configuration. Images are read-only and serve as the foundation for containers.
+        </p>
+
+        <h3>Containers</h3>
+        <p>
+          A container is a running instance of a Docker image. You can think of an image as a class and a container as an object 
+          in programming. Multiple containers can run from the same image.
+        </p>
+
+        <h3>Registry</h3>
+        <p>
+          Docker Hub is the official Docker registry where people share images. You can pull (download) images created by others 
+          or push your own images to share with the community.
+        </p>
+
+        <h2>Getting Started with Docker</h2>
+
+        <h3>Installing Docker</h3>
+        <p>Download Docker Desktop from <code>docker.com</code> and follow the installation instructions for your OS.</p>
+
+        <p>Verify installation:</p>
+        <pre><code>$ docker --version
+Docker version 24.0.0, build abc1234</code></pre>
+
+        <h2>Your First Container</h2>
+
+        <p>Running a simple container:</p>
+        <pre><code>$ docker run hello-world
+Hello from Docker!
+This message shows that your installation appears to be working correctly.</code></pre>
+
+        <p>
+          Congratulations! You just ran your first Docker container. The <code>docker run</code> command pulled the 
+          <code>hello-world</code> image from Docker Hub and executed it.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+          Docker fundamentally changed how we think about deployment. Once you grasp these basics, you're ready to containerize 
+          your own applications and explore advanced topics like Docker Compose and Kubernetes orchestration.
+        </p>
+
+        <p>Stay tuned for a deeper dive into Docker in my upcoming posts!</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 AVIDFLICK - All rights reserved</p>
+    <p>Built with GitHub Pages</p>
+  </footer>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>
