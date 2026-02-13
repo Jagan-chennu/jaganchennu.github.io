@@ -124,18 +124,7 @@ nav a:hover {
 
 /* Search Box */
 .search-container {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-sm);
-  background-color: var(--primary-color);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  padding: var(--padding-sm);
-  flex: 0 1 auto;
-  position: relative;
-  min-width: 150px;
-  min-height: 35px;
-  max-width: 100%;
+  display: none;
 }
 
 .search-container input {

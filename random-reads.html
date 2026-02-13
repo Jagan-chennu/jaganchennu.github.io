@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Reads - AVIDFLICK</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo"><img src="assets/logo.png" alt="AVIDFLICK" class="logo-img"></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="linux-concepts.html">Mastering Linux Concepts</a></li>
+          <li><a href="devops.html">DevOps</a></li>
+          <li><a href="cloud.html">Cloud Computing</a></li>
+          <li><a href="random-reads.html">Random Reads</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" title="Toggle Dark/Light Mode"></button>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Random Reads</h1>
+    <p class="page-subtitle">Miscellaneous tutorials and useful reads from across topics.</p>
+
+    <section class="posts-section">
+      <div class="posts-grid">
+        <div class="post-card" onclick="window.location.href='posts/linux-grep.html'">
+          <div class="post-image">🔍</div>
+          <div class="post-content">
+            <div class="post-date">Dec 28, 2025</div>
+            <h3 class="post-title">Mastering grep Command</h3>
+            <p class="post-excerpt">Text searching and pattern matching - become a grep expert in minutes...</p>
+          </div>
+        </div>
+
+        <div class="post-card" onclick="window.location.href='posts/file-permissions.html'">
+          <div class="post-image">🔐</div>
+          <div class="post-content">
+            <div class="post-date">Feb 5, 2026</div>
+            <h3 class="post-title">Understanding File Permissions</h3>
+            <p class="post-excerpt">Master chmod and chown to control access to your files and directories...</p>
+          </div>
+        </div>
+        
+        <div class="post-card" onclick="window.location.href='posts/shell-scripting.html'">
+          <div class="post-image">⌨️</div>
+          <div class="post-content">
+            <div class="post-date">Jan 28, 2026</div>
+            <h3 class="post-title">Shell Scripting Automation</h3>
+            <p class="post-excerpt">Write bash scripts to automate tasks and boost your productivity...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AVIDFLICK - All rights reserved</p>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
