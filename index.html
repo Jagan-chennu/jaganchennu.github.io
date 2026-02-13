@@ -11,7 +11,7 @@
   <!-- Header with Navigation -->
   <header>
     <div class="header-container">
-      <div class="logo"><img src="assets/logo.png" alt="AVIDFLICK" class="logo-img"></div>
+      <a href="index.html" class="logo"><img src="assets/logo.png" alt="AVIDFLICK" class="logo-img"></a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -31,65 +31,20 @@
 
   <!-- Main Content -->
   <main>
-    <!-- Page Subtitle -->
-    <section class="page-intro">
-      <h2>Insights on Linux, Technology & Cloud Computing</h2>
-    </section>
-
-    <!-- Latest Posts Slider -->
-    <section class="slider-section">
-      <h2 class="slider-title">📌 Latest Posts</h2>
-      
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 - Most Recent Post (Feb 13, 2026) -->
-          <div class="swiper-slide swiper-slide-active" onclick="window.location.href='posts/getting-started-linux.html'" style="cursor: pointer;">
-            <div class="slide-content">
-              <div class="slide-date">February 13, 2026</div>
-              <h3 class="slide-title">Getting Started with Linux: Essential Commands</h3>
-            </div>
-          </div>
-
-          <!-- Slide 2 - Feb 10, 2026 -->
-          <div class="swiper-slide" onclick="window.location.href='posts/docker-basics.html'" style="cursor: pointer;">
-            <div class="slide-content">
-              <div class="slide-date">February 10, 2026</div>
-              <h3 class="slide-title">Docker Basics: Containerization for Beginners</h3>
-            </div>
-          </div>
-
-          <!-- Slide 3 - Feb 5, 2026 -->
-          <div class="swiper-slide" onclick="window.location.href='posts/file-permissions.html'" style="cursor: pointer;">
-            <div class="slide-content">
-              <div class="slide-date">February 5, 2026</div>
-              <h3 class="slide-title">Understanding Linux File Permissions</h3>
-            </div>
-          </div>
-
-          <!-- Slide 4 - Jan 28, 2026 -->
-          <div class="swiper-slide" onclick="window.location.href='posts/shell-scripting.html'" style="cursor: pointer;">
-            <div class="slide-content">
-              <div class="slide-date">January 28, 2026</div>
-              <h3 class="slide-title">Shell Scripting: Automate Your Tasks</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <button class="swiper-button-prev">❮</button>
-        <button class="swiper-button-next">❯</button>
-
-        <!-- Pagination Dots -->
-        <div class="swiper-pagination" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
-          <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-          <span class="swiper-pagination-bullet"></span>
-          <span class="swiper-pagination-bullet"></span>
-          <span class="swiper-pagination-bullet"></span>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to AVIDFLICK</h1>
+        <p class="hero-subtitle">Master Linux, Cloud Computing & Technology</p>
+        <p class="hero-description">Explore in-depth tutorials, best practices, and hands-on guides to level up your technical skills.</p>
+        <div class="hero-buttons">
+          <a href="blog.html" class="btn btn-primary">Explore All Posts</a>
+          <a href="linux-concepts.html" class="btn btn-secondary">Linux Concepts</a>
         </div>
       </div>
     </section>
 
-    <!-- Recent Posts Carousel Section -->
+    <!-- Recent Posts Section (Moved to Top) -->
     <section class="posts-section">
       <h2>📚 Recent Posts</h2>
       <div class="posts-carousel">
@@ -187,6 +142,76 @@
         
         <!-- Pagination Dots -->
         <div class="carousel-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Featured Topics Section -->
+    <section class="featured-topics">
+      <h2>🎯 Featured Topics</h2>
+      <div class="topics-grid">
+        <div class="topic-card">
+          <div class="topic-icon">🐧</div>
+          <h3>Linux Fundamentals</h3>
+          <p>Master the essentials of Linux operating system and command-line tools.</p>
+          <a href="linux-concepts.html" class="topic-link">Explore →</a>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">🐳</div>
+          <h3>DevOps & Containerization</h3>
+          <p>Learn Docker, Kubernetes, and modern deployment practices.</p>
+          <a href="blog.html" class="topic-link">Explore →</a>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">☁️</div>
+          <h3>Cloud Computing</h3>
+          <p>Discover cloud platforms and infrastructure management techniques.</p>
+          <a href="blog.html" class="topic-link">Explore →</a>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">⚙️</div>
+          <h3>System Administration</h3>
+          <p>Expert tips for managing and maintaining robust systems.</p>
+          <a href="blog.html" class="topic-link">Explore →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to get the latest posts delivered to your inbox.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Feature coming soon!');">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Why Choose AVIDFLICK Section -->
+    <section class="why-section">
+      <h2>Why Choose AVIDFLICK?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-number">01</div>
+          <h3>In-Depth Guides</h3>
+          <p>Comprehensive tutorials covering practical skills and real-world scenarios.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">02</div>
+          <h3>Best Practices</h3>
+          <p>Industry-standard approaches and expert tips to boost productivity.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">03</div>
+          <h3>Regular Updates</h3>
+          <p>Fresh content covering latest tools, trends, and technologies.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">04</div>
+          <h3>Community Focused</h3>
+          <p>Connect with other learners and share knowledge and experiences.</p>
+        </div>
       </div>
     </section>
   </main>
